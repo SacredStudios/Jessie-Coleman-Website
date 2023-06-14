@@ -19,7 +19,9 @@
       <div id="unity-warning"> </div>
       <div id="unity-footer">
         <div id="unity-webgl-logo"></div>
-        <div id="unity-fullscreen-button"></div>
+        <div id="unity-fullscreen-button" style="position: fixed; top: 10px; right: 10px;">
+          <button onclick="requestFullscreen();">Fullscreen</button>
+        </div>
         <div id="unity-build-title">My project (1)</div>
       </div>
     </div>
@@ -95,12 +97,23 @@
       } else {
         // Desktop style: Render the game canvas in a window that can be maximized to fullscreen:
 
-        canvas.style.width = "960px";
-        canvas.style.height = "600px";
-	unityInstance.SetFullscreen(1);
+        //canvas.style.width = "960px";
+        //canvas.style.height = "600px";
       }
 
       loadingBar.style.display = "block";
+
+      function requestFullscreen() {
+        if (container.requestFullscreen) {
+          container.requestFullscreen();
+        } else if (container.mozRequestFullScreen) {
+          container.mozRequestFullScreen();
+        } else if (container.webkitRequestFullscreen) {
+          container.webkitRequestFullscreen();
+        } else if (container.msRequestFullscreen) {
+          container.msRequestFullscreen();
+        }
+      }
 
       var script = document.createElement("script");
       script.src = loaderUrl;
