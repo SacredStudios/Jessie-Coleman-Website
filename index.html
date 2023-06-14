@@ -56,11 +56,11 @@
       }
 
       var buildUrl = "Build";
-      var loaderUrl = buildUrl + "/test2.loader.js";
+      var loaderUrl = buildUrl + "/test.loader.js";
       var config = {
-        dataUrl: buildUrl + "/test2.data.unityweb",
-        frameworkUrl: buildUrl + "/test2.framework.js.unityweb",
-        codeUrl: buildUrl + "/test2.wasm.unityweb",
+        dataUrl: buildUrl + "/test.data.gz",
+        frameworkUrl: buildUrl + "/test.framework.js.gz",
+        codeUrl: buildUrl + "/test.wasm.gz",
         streamingAssetsUrl: "StreamingAssets",
         companyName: "DefaultCompany",
         productName: "My project (1)",
@@ -95,8 +95,9 @@
       } else {
         // Desktop style: Render the game canvas in a window that can be maximized to fullscreen:
 
-        canvas.style.width = "960px";
-        canvas.style.height = "600px";
+        //canvas.style.width = "960px";
+        //canvas.style.height = "600px";
+	unityInstance.SetFullscreen(1);
       }
 
       loadingBar.style.display = "block";
