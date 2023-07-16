@@ -42,7 +42,7 @@
       var loadingScreen = document.getElementById('loading-screen');
       var unityCanvas = document.querySelector("#unity-canvas");
 
-      createUnityInstance(unityCanvas, {
+      var unityInstance = createUnityInstance(unityCanvas, {
         dataUrl: "Build/test3.data.unityweb",
         frameworkUrl: "Build/test3.framework.js.unityweb",
         codeUrl: "Build/test3.wasm.unityweb",
@@ -55,6 +55,7 @@
         onProgress: function (progress) {
           if (progress === 1) {
             loadingScreen.style.display = 'none';
+            unityInstance.Module.canvas.style.visibility = 'visible';
           }
         }
       });
