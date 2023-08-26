@@ -3,7 +3,7 @@
     margin: 0;
     padding: 0;
     font-family: 'Verdana', sans-serif;
-     background: #141414;
+     background: #f0f0f0;
     
 }
 
@@ -16,12 +16,13 @@
     font-size: 1.2rem; /*1 rem = 16 px*/
     position: sticky;
     top: 0;
-    z-index: 999; /*this is the equivalent to layers in photoshop*/
+    z-index: 9999; /*this is the equivalent to layers in photoshop*/
     
     
 }
 
 .navbar__container {
+    background: #131313;
     display: flex;
     justify-content: space-between;
     height: 80px;
@@ -40,9 +41,10 @@
 
 
 #navbar__logo {
+    background: #131313;
     background-color: #0400ff;
     
-    background-image: linear-gradient(to top, #0400ff 0%, #00f7ff 100%);
+    background-image: linear-gradient(to top, #ffffff 0%, #a1a1a1 100%);
     background-size: 100%;
     -webkit-background-clip: text;
     -moz-background-clip: text;
@@ -67,6 +69,7 @@
 }
 
 .navbar__menu {
+    background: #131313;
     display: flex;
     align-items: center;
     list-style: none;
@@ -80,6 +83,7 @@
 }
 
 .navbar__links {
+    background: #131313;
     
     color: #fff;
     display: flex;
@@ -125,6 +129,7 @@
 }
 
 .button {
+    background: #131313;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -135,18 +140,20 @@
     border: none;
     outline:none;
     border-radius: 4px;
-    background: #0400ff;
+    background: #606060;
     color: rgb(255, 255, 255);
 
 }
 
 .button:hover {
-    background: #4837ff;
+    background: #131313;
+    background: #a1a1a1;
     transition: all 0.3s ease;
 }
 
 .navbar__links:hover {
-    color:#0400ff;
+    background: #131313;
+    color:#a1a1a1;
     transition: all 0.3s ease;
 
 
@@ -155,6 +162,7 @@
 @media screen and (max-width: 960px) {
 .navbar__container {
     display: flex;
+    background: #131313;
     justify-content: space-between;
     height: 80px;
     z-index: 1;
@@ -164,6 +172,7 @@
  }
 
 .navbar__menu {
+    background: #131313;
     display: grid;
     grid-template-columns: auto;
     margin: 0;
@@ -190,10 +199,12 @@
 
 
 #navbar__logo {
+    
     padding-left: 25px;
 }
 
 .navbar__toggle .bar {
+    background: #131313;
     width: 25px;
     height: 3px;
     margin: 5px auto;
@@ -202,6 +213,7 @@
 }
 
 .navbar__item {
+    background: #131313;
     width: 100%;
 
 }
@@ -215,6 +227,7 @@
 }
 
 #mobile-menu {
+    background: #131313;
     position: absolute;
     top: 20%;
     right: 5%;
@@ -224,10 +237,12 @@
 
 
 .navbar__btn {
+    background: #131313;
     padding-bottom: 2rem;
 
 }
 .button {
+    background: #131313;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -237,6 +252,7 @@
 }
 
 .navbar__toggle .bar {
+    background: #ffffff;
     display: block;
     cursor: pointer;
 
@@ -283,9 +299,8 @@
 }
 
 .main__content h1 {
-    font-size: 4rem;
-    background-color: #0400ff;
-    background-image: linear-gradient(to top, #4837ff 0%, #00f7ff 100% );
+    font-size: 2rem;
+    background-color: #131313;
     background-size:  100%;
     -webkit-background-clip: text;
     -moz-background-clip: text;
@@ -312,11 +327,9 @@
     color: #fff;
 }
 .main__content text--project {
-    margin-top: 1rem;
-    
-    font-size: 2rem;
-    font-weight: 70;
-    color: #fff;
+    font-size: 1rem;
+    font-weight: 40;
+    color: #131313;
     text-align: left;
     
     
@@ -327,7 +340,7 @@
     margin-top: 1rem;
     font-size: 2rem;
     font-weight: 70;
-    color: #fff;
+    color: #131313;
     text-align: left;
     
     
@@ -428,11 +441,13 @@ padding-left: 3rem;
 
     }
     .main__content h1 {
+        color: #131313;
         font-size: 2.5rem;
         margin-top: 2rem;
         
     }
     .main__content h2 {
+        color: #131313;
         font-size: 3rem;
     }
     .main__content p {
@@ -479,15 +494,13 @@ padding-left: 3rem;
 
 .services h1 {
     background-color: #ff8177;
-   /* background-image: linear-gradient(to right, #ff8 0%, #ff43 0%, #ff69)
-*/
-backgound-size: 100%;
-margin-bottom: 5rem;
-font-size: 2.5rem;
--webkit-background-clip: text;
--moz-background-clip: text;
--webkit-text-fill-color: transparent;
--moz-text-fill-color: transparent; 
+    backgound-size: 100%;
+    margin-bottom: 5rem;
+    font-size: 2.5rem;
+    -webkit-background-clip: text;
+    -moz-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    -moz-text-fill-color: transparent; 
 };
 .services__container {
     display: flex;
@@ -499,8 +512,6 @@ font-size: 2.5rem;
     height: 525px;
     width: 400px;
     border-radius: 4px;
-   /* background-image: linear-gradient(to bottom, rgba(0,0,0,0) 0%, rgba(17,17,17,0.6) 100%), url('/images/pic2.jpg');
-   */
     background-image: url('/images/pic2.jpg');
     background-size: cover;
     position: relative;
