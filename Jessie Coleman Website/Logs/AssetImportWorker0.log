@@ -327,3 +327,35 @@ Memory consumption went from 159.9 MB to 153.8 MB.
 Total: 35.077013 ms (FindLiveObjects: 1.308669 ms CreateObjectMapping: 1.663558 ms MarkObjects: 21.607939 ms  DeleteObjects: 10.493731 ms)
 
 Prepare: number of updated asset objects reloaded= 0
+========================================================================
+Received Import Request.
+  Time since last request: 1899.708528 seconds.
+  path: Assets/Pictures/A_Algorithm.jpg
+  artifactKey: Guid(b1494b9588ee8441cb82a54405b87fb4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Pictures/A_Algorithm.jpg using Guid(b1494b9588ee8441cb82a54405b87fb4) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '887da46e549da18f93f2f9bc791da373') in 1.524299971 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 2
+
+========================================================================
+Received Import Request.
+  Time since last request: 1191.039508 seconds.
+  path: Assets/Pictures/Arduino_Logo.svg.png
+  artifactKey: Guid(17bd7d9259a4544f6ad2adfd9274fb56) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Pictures/Arduino_Logo.svg.png using Guid(17bd7d9259a4544f6ad2adfd9274fb56) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '29f9611ebdd41ee505958e3e8cdac930') in 0.481286685 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 2
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000981 seconds.
+  path: Assets/Pictures/Csharp_Logo.png
+  artifactKey: Guid(8602f5ba371234015a92f40c8938d082) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Pictures/Csharp_Logo.png using Guid(8602f5ba371234015a92f40c8938d082) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '441bef144bb86300fc24f2034c61c055') in 0.08012189 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 2
+
+========================================================================
+Received Import Request.
+  Time since last request: 1842.823562 seconds.
+  path: Assets/Pictures/ISO_C++_Logo.svg.png
+  artifactKey: Guid(48276e9070e304b8d83e823d4df5739b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Pictures/ISO_C++_Logo.svg.png using Guid(48276e9070e304b8d83e823d4df5739b) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '9787a05f066f467e41c369bafc64d68b') in 0.539474074 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 2
+
