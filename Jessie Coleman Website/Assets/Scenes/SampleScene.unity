@@ -904,7 +904,7 @@ GameObject:
   - component: {fileID: 377564593}
   - component: {fileID: 377564592}
   m_Layer: 5
-  m_Name: C#
+  m_Name: Javascript
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -926,8 +926,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -137, y: 48}
-  m_SizeDelta: {x: 85.249, y: 80.018}
+  m_AnchoredPosition: {x: -130.084, y: 52.911}
+  m_SizeDelta: {x: 91.134, y: 45.025}
   m_Pivot: {x: 0.50000036, y: 0.5}
 --- !u!114 &377564592
 MonoBehaviour:
@@ -964,7 +964,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Texture: {fileID: 2800000, guid: 8602f5ba371234015a92f40c8938d082, type: 3}
+  m_Texture: {fileID: 2800000, guid: e96dfdab2966143b1ba6d2986066ccda, type: 3}
   m_UVRect:
     serializedVersion: 2
     x: 0
@@ -1407,7 +1407,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Texture: {fileID: 2800000, guid: 541245aeba5ce463db380de6f7a31bfa, type: 3}
+  m_Texture: {fileID: 2800000, guid: 7def944b0335244f0b951d9b8ac82497, type: 3}
   m_UVRect:
     serializedVersion: 2
     x: 0
@@ -1832,7 +1832,7 @@ Transform:
   m_GameObject: {fileID: 677093245}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -13.08, y: 0, z: 1.13}
+  m_LocalPosition: {x: -16.23, y: 0, z: 1.13}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1850,7 +1850,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 42b46eaced56b40179958e3f68a3e681, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  menu: {fileID: 18768375}
+  menu: {fileID: 2104892884}
 --- !u!65 &677093248
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -1938,7 +1938,7 @@ GameObject:
   - component: {fileID: 709112545}
   - component: {fileID: 709112544}
   m_Layer: 5
-  m_Name: WebGL
+  m_Name: ChatGPT
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1960,8 +1960,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -293, y: 44}
-  m_SizeDelta: {x: 83.544, y: 29.147}
+  m_AnchoredPosition: {x: -390, y: 49.393}
+  m_SizeDelta: {x: 83.544, y: 24.558}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &709112544
 MonoBehaviour:
@@ -1998,7 +1998,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Texture: {fileID: 2800000, guid: c12e147ab4d274c77aa8e5bedf67c4f7, type: 3}
+  m_Texture: {fileID: 2800000, guid: 5a8626df02a6b4b31b82754fffce23b0, type: 3}
   m_UVRect:
     serializedVersion: 2
     x: 0
@@ -2075,7 +2075,7 @@ GameObject:
   - component: {fileID: 771084197}
   - component: {fileID: 771084196}
   m_Layer: 5
-  m_Name: Unity
+  m_Name: React
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2097,8 +2097,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -12, y: 49.076}
-  m_SizeDelta: {x: 50.049, y: 51.089}
+  m_AnchoredPosition: {x: -6.672, y: 43.86}
+  m_SizeDelta: {x: 45.515, y: 46.651}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &771084196
 MonoBehaviour:
@@ -2128,14 +2128,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.3490566, g: 0.3490566, b: 0.3490566, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Texture: {fileID: 2800000, guid: b92302953a8664ac0958fe36c61264e2, type: 3}
+  m_Texture: {fileID: 2800000, guid: a74a10193f2354e499ae8bcebdcab089, type: 3}
   m_UVRect:
     serializedVersion: 2
     x: 0
@@ -2297,7 +2297,7 @@ MonoBehaviour:
       m_Calls: []
   m_FontData:
     m_Font: {fileID: 12800000, guid: 1e69f2361a21f4aa68352aa0f93096e0, type: 3}
-    m_FontSize: 40
+    m_FontSize: 35
     m_FontStyle: 0
     m_BestFit: 0
     m_MinSize: 0
@@ -3199,8 +3199,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -208.768, y: -19}
-  m_SizeDelta: {x: 818.953, y: 361.2}
+  m_AnchoredPosition: {x: -228.50104, y: -19}
+  m_SizeDelta: {x: 726.1964, y: 361.2}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1252902973
 MonoBehaviour:
@@ -3224,7 +3224,7 @@ MonoBehaviour:
       m_Calls: []
   m_FontData:
     m_Font: {fileID: 12800000, guid: 1e69f2361a21f4aa68352aa0f93096e0, type: 3}
-    m_FontSize: 40
+    m_FontSize: 35
     m_FontStyle: 0
     m_BestFit: 0
     m_MinSize: 0
@@ -3615,7 +3615,7 @@ MonoBehaviour:
       m_Calls: []
   m_FontData:
     m_Font: {fileID: 12800000, guid: 1e69f2361a21f4aa68352aa0f93096e0, type: 3}
-    m_FontSize: 40
+    m_FontSize: 35
     m_FontStyle: 0
     m_BestFit: 0
     m_MinSize: 0
@@ -4136,7 +4136,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -446.843, y: 52.268}
+  m_AnchoredPosition: {x: -233, y: 52.268}
   m_SizeDelta: {x: 48.902, y: 42.806}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1614084646
@@ -4248,7 +4248,7 @@ MonoBehaviour:
       m_Calls: []
   m_FontData:
     m_Font: {fileID: 12800000, guid: 1e69f2361a21f4aa68352aa0f93096e0, type: 3}
-    m_FontSize: 40
+    m_FontSize: 35
     m_FontStyle: 0
     m_BestFit: 0
     m_MinSize: 0
@@ -4259,9 +4259,9 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 1
     m_LineSpacing: 1
-  m_Text: "\u25CF Online multiplayer shooter game with skating mechanics. Game supports
-    up to 25 players concurrently.\n\n\u25CF  Uses WebGL to allow for game to run
-    on-browser. Characters and weapons are customizabled. "
+  m_Text: "\u25CF Generative Math Quiz App that creates questions using ChatGPT API
+    and JavaScript Web Speech Recognition API\n\n\u25CF  Users have 60 seconds to
+    shout a series of math questions for a high score."
 --- !u!222 &1636759719
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -4329,7 +4329,7 @@ MonoBehaviour:
       m_Calls: []
   m_FontData:
     m_Font: {fileID: 12800000, guid: 1e69f2361a21f4aa68352aa0f93096e0, type: 3}
-    m_FontSize: 40
+    m_FontSize: 35
     m_FontStyle: 0
     m_BestFit: 0
     m_MinSize: 0
@@ -5222,7 +5222,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 1
     m_VerticalOverflow: 1
     m_LineSpacing: 1
-  m_Text: Rolleroidz
+  m_Text: Rolleroidz Game
 --- !u!222 &2069999822
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -5331,7 +5331,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &2104892885
 RectTransform:
   m_ObjectHideFlags: 0
@@ -5500,7 +5500,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 1
     m_VerticalOverflow: 1
     m_LineSpacing: 1
-  m_Text: Matheletes
+  m_Text: Matheletes AI
 --- !u!222 &2122138985
 CanvasRenderer:
   m_ObjectHideFlags: 0
