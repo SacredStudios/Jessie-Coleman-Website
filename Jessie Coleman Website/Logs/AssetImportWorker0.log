@@ -1180,3 +1180,4 @@ Memory consumption went from 169.6 MB to 162.9 MB.
 Total: 54.970885 ms (FindLiveObjects: 2.017498 ms CreateObjectMapping: 2.234063 ms MarkObjects: 30.497396 ms  DeleteObjects: 20.218079 ms)
 
 Prepare: number of updated asset objects reloaded= 0
+AssetImportWorkerClient::OnTransportError - code=2 error=End of file
