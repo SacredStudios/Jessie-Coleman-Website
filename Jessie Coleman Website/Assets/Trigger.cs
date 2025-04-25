@@ -5,13 +5,16 @@ public class Trigger : MonoBehaviour
     [SerializeField] GameObject menu;
     private void OnTriggerEnter(Collider other)
     {
-        if ("Player" == "Player")
+        if (other.tag == "Player")
         {
             Trigger_Handler.ChangeMenu(menu);
         }
     }
     private void OnTriggerExit(Collider other)
     {
-        Trigger_Handler.ChangeMenu(null);
+        if (other.tag == "Player")
+        {
+            Trigger_Handler.ChangeMenu(null);
+        }
     }
 }
