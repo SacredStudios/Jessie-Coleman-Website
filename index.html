@@ -18,6 +18,10 @@
             box-sizing: border-box;
         }
 
+        :root {
+            --navbar-area-height: 110px;
+        }
+
         html,
         body {
             width: 100%;
@@ -68,9 +72,11 @@
 
             pointer-events: none;
 
-            z-index: 20;
+            z-index: 1;
 
-            animation: glowOne 9s ease-in-out infinite alternate;
+            animation:
+                glowOne
+                9s ease-in-out infinite alternate;
         }
 
         body::after {
@@ -95,108 +101,82 @@
 
             pointer-events: none;
 
-            z-index: 20;
+            z-index: 1;
 
-            animation: glowTwo 11s ease-in-out infinite alternate;
+            animation:
+                glowTwo
+                11s ease-in-out infinite alternate;
         }
 
         @keyframes glowOne {
             from {
-                transform: translate(0, 0) scale(1);
+                transform:
+                    translate(0, 0)
+                    scale(1);
             }
 
             to {
-                transform: translate(100px, 60px) scale(1.2);
+                transform:
+                    translate(100px, 60px)
+                    scale(1.2);
             }
         }
 
         @keyframes glowTwo {
             from {
-                transform: translate(0, 0) scale(1);
+                transform:
+                    translate(0, 0)
+                    scale(1);
             }
 
             to {
-                transform: translate(-100px, -60px) scale(1.15);
+                transform:
+                    translate(-100px, -60px)
+                    scale(1.15);
             }
         }
 
-        #unity-container {
-            position: fixed !important;
+        /* =========================================================
+           NAVBAR AREA
+        ========================================================= */
 
-            inset: 0 !important;
+        .portfolio-header {
+            position: relative;
 
-            width: 100vw !important;
-            height: 100vh !important;
+            width: 100%;
+            height: var(--navbar-area-height);
 
-            margin: 0 !important;
-            padding: 0 !important;
+            display: flex;
+            align-items: center;
+            justify-content: center;
 
-            transform: none !important;
-
-            overflow: hidden;
-
-            background:
-                linear-gradient(
-                    135deg,
-                    #b4f4ff,
-                    #e2faff,
-                    #e9ddff
-                );
-        }
-
-        #unity-container.unity-desktop,
-        #unity-container.unity-mobile {
-            width: 100vw !important;
-            height: 100vh !important;
-        }
-
-        #unity-canvas {
-            position: absolute;
-
-            inset: 0;
-
-            display: block;
-
-            width: 100vw !important;
-            height: 100vh !important;
-
-            margin: 0 !important;
-            padding: 0 !important;
-
-            outline: none;
-
-            background:
-                linear-gradient(
-                    135deg,
-                    #b4f4ff,
-                    #e2faff
-                );
-        }
-
-        #unity-footer {
-            display: none !important;
-        }
-
-        .portfolio-nav {
-            position: fixed;
-
-            top: 22px;
-            left: 50%;
-
-            width: calc(100% - 80px);
-            max-width: 1120px;
-            height: 72px;
-
-            transform:
-                translateX(-50%)
-                translateY(-25px);
+            padding: 18px 40px;
 
             z-index: 1000;
 
+            background:
+                linear-gradient(
+                    135deg,
+                    rgba(156, 242, 255, 0.95),
+                    rgba(213, 247, 255, 0.95),
+                    rgba(238, 225, 255, 0.95)
+                );
+        }
+
+        .portfolio-nav {
+            position: relative;
+
+            width: 100%;
+            max-width: 1120px;
+            height: 72px;
+
             opacity: 0;
 
+            transform: translateY(-20px);
+
             animation:
-                navEnter 0.7s
+                navEnter
+                0.7s
                 cubic-bezier(0.22, 1, 0.36, 1)
                 forwards;
         }
@@ -204,10 +184,7 @@
         @keyframes navEnter {
             to {
                 opacity: 1;
-
-                transform:
-                    translateX(-50%)
-                    translateY(0);
+                transform: translateY(0);
             }
         }
 
@@ -282,7 +259,8 @@
             pointer-events: none;
 
             animation:
-                navGlow 6s ease-in-out infinite alternate;
+                navGlow
+                6s ease-in-out infinite alternate;
         }
 
         .portfolio-nav-inner::after {
@@ -308,7 +286,8 @@
             pointer-events: none;
 
             animation:
-                navGlow 7s ease-in-out infinite alternate-reverse;
+                navGlow
+                7s ease-in-out infinite alternate-reverse;
         }
 
         @keyframes navGlow {
@@ -339,7 +318,6 @@
             font-weight: 900;
 
             line-height: 0.9;
-
             letter-spacing: -0.9px;
 
             cursor: default;
@@ -398,13 +376,6 @@
                 rgba(255, 255, 255, 0.38) !important;
 
             text-decoration: none !important;
-
-            font-family:
-                Inter,
-                -apple-system,
-                BlinkMacSystemFont,
-                "Segoe UI",
-                sans-serif !important;
 
             font-size: 14px !important;
             font-weight: 700 !important;
@@ -514,8 +485,86 @@
             border-radius: 100px;
         }
 
-        #unity-loading-bar {
+        /* =========================================================
+           UNITY GAME
+        ========================================================= */
+
+        #unity-container {
             position: fixed !important;
+
+            top: var(--navbar-area-height) !important;
+            left: 0 !important;
+            right: 0 !important;
+            bottom: 0 !important;
+
+            width: 100vw !important;
+
+            height:
+                calc(
+                    100vh - var(--navbar-area-height)
+                ) !important;
+
+            margin: 0 !important;
+            padding: 0 !important;
+
+            transform: none !important;
+
+            overflow: hidden;
+
+            z-index: 10;
+
+            background:
+                linear-gradient(
+                    135deg,
+                    #b4f4ff,
+                    #e2faff,
+                    #e9ddff
+                );
+        }
+
+        #unity-container.unity-desktop,
+        #unity-container.unity-mobile {
+            width: 100vw !important;
+
+            height:
+                calc(
+                    100vh - var(--navbar-area-height)
+                ) !important;
+        }
+
+        #unity-canvas {
+            position: absolute;
+
+            inset: 0;
+
+            display: block;
+
+            width: 100% !important;
+            height: 100% !important;
+
+            margin: 0 !important;
+            padding: 0 !important;
+
+            outline: none;
+
+            background:
+                linear-gradient(
+                    135deg,
+                    #b4f4ff,
+                    #e2faff
+                );
+        }
+
+        #unity-footer {
+            display: none !important;
+        }
+
+        /* =========================================================
+           LOADING
+        ========================================================= */
+
+        #unity-loading-bar {
+            position: absolute !important;
 
             top: 50% !important;
             left: 50% !important;
@@ -616,9 +665,11 @@
             border-radius: inherit;
 
             animation:
-                loadingGradient 2s linear infinite;
+                loadingGradient
+                2s linear infinite;
 
-            transition: width 0.15s ease;
+            transition:
+                width 0.15s ease;
         }
 
         @keyframes loadingGradient {
@@ -632,9 +683,9 @@
         }
 
         #unity-warning {
-            position: fixed;
+            position: absolute;
 
-            top: 110px;
+            top: 20px;
             left: 50%;
 
             width:
@@ -647,6 +698,10 @@
 
             z-index: 3000;
         }
+
+        /* =========================================================
+           FULLSCREEN BUTTON
+        ========================================================= */
 
         .portfolio-fullscreen {
             position: fixed;
@@ -729,11 +784,25 @@
             height: 22px;
         }
 
-        @media (max-width: 700px) {
-            .portfolio-nav {
-                top: 12px;
+        /* =========================================================
+           MOBILE
+        ========================================================= */
 
-                width: calc(100% - 24px);
+        @media (max-width: 700px) {
+            :root {
+                --navbar-area-height: 92px;
+            }
+
+            .portfolio-header {
+                height: var(--navbar-area-height);
+
+                padding:
+                    10px
+                    12px;
+            }
+
+            .portfolio-nav {
+                height: 72px;
             }
 
             .portfolio-nav-inner {
@@ -745,12 +814,15 @@
             }
 
             .portfolio-nav-links {
-                position: absolute;
+                position: fixed;
 
-                top: 82px;
-                left: 0;
+                top: 92px;
+                left: 12px;
 
-                width: 100%;
+                width:
+                    calc(
+                        100% - 24px
+                    );
 
                 display: none;
 
@@ -759,17 +831,32 @@
                 padding: 12px !important;
 
                 background:
-                    rgba(245, 253, 255, 0.97) !important;
+                    rgba(
+                        245,
+                        253,
+                        255,
+                        0.97
+                    ) !important;
 
                 border:
                     1px solid
-                    rgba(255, 255, 255, 0.95);
+                    rgba(
+                        255,
+                        255,
+                        255,
+                        0.95
+                    );
 
                 border-radius: 18px;
 
                 box-shadow:
                     0 20px 50px
-                    rgba(40, 100, 130, 0.2);
+                    rgba(
+                        40,
+                        100,
+                        130,
+                        0.2
+                    );
 
                 backdrop-filter: blur(22px);
                 -webkit-backdrop-filter: blur(22px);
@@ -797,69 +884,83 @@
 
 <body>
 
+    <header class="portfolio-header">
+
+        <nav class="portfolio-nav">
+
+            <div class="portfolio-nav-inner">
+
+                <div class="portfolio-logo">
+                    Jessie<br>
+                    Coleman
+                </div>
+
+                <button
+                    class="portfolio-mobile-button"
+                    id="portfolio-mobile-button"
+                    aria-label="Open navigation"
+                >
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+
+                <ul
+                    class="portfolio-nav-links"
+                    id="portfolio-nav-links"
+                >
+                    <li class="portfolio-nav-item">
+
+                        <a
+                            href="/index.html"
+                            class="portfolio-nav-link"
+                        >
+                            <span>Home</span>
+                        </a>
+
+                    </li>
+
+                    <li class="portfolio-nav-item">
+
+                        <a
+                            href="/contact.html"
+                            class="portfolio-nav-link"
+                        >
+                            <span>Contact Me</span>
+                        </a>
+
+                    </li>
+                </ul>
+
+            </div>
+
+        </nav>
+
+    </header>
+
     <div
         id="unity-container"
         class="unity-desktop"
     >
+
         <canvas
             id="unity-canvas"
             tabindex="-1"
         ></canvas>
 
         <div id="unity-loading-bar">
+
             <div id="unity-logo"></div>
 
             <div id="unity-progress-bar-empty">
                 <div id="unity-progress-bar-full"></div>
             </div>
+
         </div>
 
         <div id="unity-warning"></div>
+
     </div>
-
-    <nav class="portfolio-nav">
-        <div class="portfolio-nav-inner">
-
-            <div class="portfolio-logo">
-                Jessie<br>
-                Coleman
-            </div>
-
-            <button
-                class="portfolio-mobile-button"
-                id="portfolio-mobile-button"
-                aria-label="Open navigation"
-            >
-                <span></span>
-                <span></span>
-                <span></span>
-            </button>
-
-            <ul
-                class="portfolio-nav-links"
-                id="portfolio-nav-links"
-            >
-                <li class="portfolio-nav-item">
-                    <a
-                        href="/index.html"
-                        class="portfolio-nav-link"
-                    >
-                        <span>Home</span>
-                    </a>
-                </li>
-
-                <li class="portfolio-nav-item">
-                    <a
-                        href="/contact.html"
-                        class="portfolio-nav-link"
-                    >
-                        <span>Contact Me</span>
-                    </a>
-                </li>
-            </ul>
-
-        </div>
-    </nav>
 
     <button
         class="portfolio-fullscreen"
@@ -883,35 +984,49 @@
 
     <script>
         const container =
-            document.querySelector("#unity-container");
+            document.querySelector(
+                "#unity-container"
+            );
 
         const canvas =
-            document.querySelector("#unity-canvas");
+            document.querySelector(
+                "#unity-canvas"
+            );
 
         const loadingBar =
-            document.querySelector("#unity-loading-bar");
+            document.querySelector(
+                "#unity-loading-bar"
+            );
 
         const progressBarFull =
-            document.querySelector("#unity-progress-bar-full");
+            document.querySelector(
+                "#unity-progress-bar-full"
+            );
 
         const warningBanner =
-            document.querySelector("#unity-warning");
+            document.querySelector(
+                "#unity-warning"
+            );
 
         const fullscreenButton =
-            document.querySelector("#portfolio-fullscreen");
+            document.querySelector(
+                "#portfolio-fullscreen"
+            );
 
         const mobileButton =
-            document.querySelector("#portfolio-mobile-button");
+            document.querySelector(
+                "#portfolio-mobile-button"
+            );
 
         const navLinks =
-            document.querySelector("#portfolio-nav-links");
+            document.querySelector(
+                "#portfolio-nav-links"
+            );
 
         let unityInstance = null;
 
-        function unityShowBanner(msg, type)
-        {
-            function updateBannerVisibility()
-            {
+        function unityShowBanner(msg, type) {
+            function updateBannerVisibility() {
                 warningBanner.style.display =
                     warningBanner.children.length
                         ? "block"
@@ -925,24 +1040,18 @@
 
             warningBanner.appendChild(div);
 
-            if (type === "error")
-            {
+            if (type === "error") {
                 div.style =
                     "background:#ff5d73;color:white;padding:12px 16px;border-radius:14px;";
-            }
-            else
-            {
-                if (type === "warning")
-                {
+            } else {
+                if (type === "warning") {
                     div.style =
                         "background:#ffe27a;color:#243746;padding:12px 16px;border-radius:14px;";
                 }
 
                 setTimeout(
-                    function()
-                    {
-                        if (div.parentNode)
-                        {
+                    function() {
+                        if (div.parentNode) {
                             warningBanner.removeChild(div);
                         }
 
@@ -961,8 +1070,7 @@
         const loaderUrl =
             buildUrl + "/Build.loader.js";
 
-        const config =
-        {
+        const config = {
             dataUrl:
                 buildUrl + "/Build.data.unityweb",
 
@@ -991,19 +1099,29 @@
                 true
         };
 
-        function resizeUnity()
-        {
+        function resizeUnity() {
+            const navbarHeight =
+                document
+                    .querySelector(
+                        ".portfolio-header"
+                    )
+                    .offsetHeight;
+
+            const gameHeight =
+                window.innerHeight -
+                navbarHeight;
+
+            container.style.top =
+                navbarHeight + "px";
+
+            container.style.height =
+                gameHeight + "px";
+
             canvas.style.width =
                 window.innerWidth + "px";
 
             canvas.style.height =
-                window.innerHeight + "px";
-
-            container.style.width =
-                window.innerWidth + "px";
-
-            container.style.height =
-                window.innerHeight + "px";
+                gameHeight + "px";
         }
 
         resizeUnity();
@@ -1022,20 +1140,17 @@
         script.src =
             loaderUrl;
 
-        script.onload = () =>
-        {
+        script.onload = () => {
             createUnityInstance(
                 canvas,
                 config,
-                (progress) =>
-                {
+                (progress) => {
                     progressBarFull.style.width =
                         (100 * progress) + "%";
                 }
             )
             .then(
-                (instance) =>
-                {
+                (instance) => {
                     unityInstance =
                         instance;
 
@@ -1048,8 +1163,7 @@
                 }
             )
             .catch(
-                (message) =>
-                {
+                (message) => {
                     unityShowBanner(
                         message,
                         "error"
@@ -1058,8 +1172,7 @@
             );
         };
 
-        script.onerror = () =>
-        {
+        script.onerror = () => {
             unityShowBanner(
                 "Unable to load the Unity WebGL loader.",
                 "error"
@@ -1070,26 +1183,21 @@
 
         fullscreenButton.addEventListener(
             "click",
-            async () =>
-            {
-                try
-                {
-                    if (!document.fullscreenElement)
-                    {
+            async () => {
+                try {
+                    if (!document.fullscreenElement) {
                         await document
                             .documentElement
                             .requestFullscreen();
-                    }
-                    else
-                    {
-                        await document.exitFullscreen();
+                    } else {
+                        await document
+                            .exitFullscreen();
                     }
 
                     resizeUnity();
+
                     canvas.focus();
-                }
-                catch (error)
-                {
+                } catch (error) {
                     console.error(
                         "Fullscreen failed:",
                         error
@@ -1100,16 +1208,16 @@
 
         mobileButton.addEventListener(
             "click",
-            () =>
-            {
-                navLinks.classList.toggle("open");
+            () => {
+                navLinks.classList.toggle(
+                    "open"
+                );
             }
         );
 
         canvas.addEventListener(
             "mousedown",
-            () =>
-            {
+            () => {
                 canvas.focus();
             }
         );
